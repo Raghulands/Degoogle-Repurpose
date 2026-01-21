@@ -1,0 +1,8 @@
+fastboot ADB Commands
+
+adb devices 
+adb reboot bootloader
+fastboot oem unlock
+fastboot flashing unlock
+adb reboot recovery
+adb sideload rom.zip
