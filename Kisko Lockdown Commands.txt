@@ -1,0 +1,45 @@
+DeGoogle the System
+
+You can keep it clean by:
+
+Remove bloat apps
+adb shell pm uninstall -k --user 0 <package>
+
+Disable system apps
+adb shell pm disable-user --user 0 <package>
+
+Disable status bar & navigation (optional)
+adb shell settings put global policy_control immersive.full=*
+
+adb install app.apk
+
+
+
+
+App Device Owner (Mandatory for kiosk mode)
+
+adb shell dpm set-device-owner com.yourapp/.MyDeviceAdminReceiver
+
+
+
+
+
+Enable Kiosk 
+Inside your app, call:
+
+startLockTask()
+
+If needed, you can stop:
+
+stopLockTask()
+
+
+
+Set App to Auto Start on Boot
+
+Set your app as default launcher:
+
+adb shell cmd package set-home-activity com.yourapp/.MainActivity
+
+
+
