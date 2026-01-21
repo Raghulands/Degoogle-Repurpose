@@ -1,3 +1,5 @@
+Steps To Makeup
+
 1. Prepare the phone
    Enable USB debugging
    Install ADB + Fastboot on your PC
